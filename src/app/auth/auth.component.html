@@ -1,0 +1,46 @@
+<div class="w-75 t-center container">
+    {{authService.getAuthToken()}}
+    <form *ngIf="!loginIsShow"   class="container" action="/action_page.php">
+        <div class="container text-center">
+            <h1>Signup</h1>
+        </div>
+        <div class="form-group">
+            <!-- <label for="email">Email address:</label> -->
+            <input [(ngModel)]="username" name="username" type="text" class="form-control" placeholder="Enter username" id="username">
+          </div>
+        <div class="form-group">
+          <!-- <label for="email">Email address:</label> -->
+          <input [(ngModel)]="email" name="email" type="email" class="form-control" placeholder="Enter email" id="email">
+        </div>
+        <div class="form-group">
+          <!-- <label for="pwd">Password:</label> -->
+          <input [(ngModel)]="password" name="password" type="password" class="form-control" placeholder="Enter password" id="pwd">
+        </div>
+       
+        <button (click)="submit()"  type="submit" class="btn btn-primary">signup</button>
+        <div>
+            <button (click)="toggleAuth()"  class="btn btn-default">login</button>
+        </div>
+      </form> 
+
+
+
+      <form *ngIf="loginIsShow"  class="container" action="/action_page.php">
+        <div class="container text-center">
+            <h1>login</h1>
+        </div>
+        <div class="form-group">
+          <!-- <label for="email">Email address:</label> -->
+          <input [(ngModel)]="username" name="username" type="text" class="form-control" placeholder="Enter username" id="username">
+        </div>
+        <div class="form-group">
+          <!-- <label for="pwd">Password:</label> -->
+          <input [(ngModel)]="password" name="password" type="password" class="form-control" placeholder="Enter password" id="pwd">
+        </div>
+       
+        <button (click)="submit()"  type="submit" class="btn btn-primary">login</button>
+        <div>
+            <button (click)="toggleAuth()"  class="btn btn-default">signup</button>
+        </div>
+      </form> 
+</div>
