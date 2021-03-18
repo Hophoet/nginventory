@@ -1,0 +1,73 @@
+<div class="container">
+      <!-- <button (click)="getExpenses()"  class="btn btn-default">load data</button> -->
+    <table class="table">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">
+              <button (click)="insertExpense()" class="btn btn-info">+</button>
+              Expense
+            </th>
+  
+            <th scope="col">Amount</th>
+            <th scope="col">Description</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of expenses; let i = index">
+            <th scope="row">{{i+1}}</th>
+            <td>{{item.amount}}</td>
+            <td>{{item.description}}</td>
+            <td>
+              <button  (click)="update('expense', item.id)" class="btn btn-info">update</button>
+              <button  (click)="deleteExpense(item.id)" class="btn btn-danger">delete</button>
+            </td>
+          </tr>
+       
+        </tbody>
+      </table>
+      
+      <table class="table">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">
+              <button (click)="insertIncome()" class="btn btn-info">+</button>
+              Incomes
+            </th>
+            <th scope="col">Amount</th>
+            <th scope="col">Description</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of incomes; let i = index">
+            <th scope="row">{{i+1}}</th>
+            <td>{{item.amount}}</td>
+            <td>{{item.description}}</td>
+            <td>
+              <button  (click)="update('income', item.id)" class="btn btn-info">update</button>
+              <button  (click)="deleteIncome(item.id)" class="btn btn-danger">delete</button>
+            </td>
+          </tr>
+      
+        </tbody>
+      </table>
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Results</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr >
+            <th scope="row"></th>
+            <td>{{result}}</td>
+            <td>{{resultStatus}}</td>
+          </tr>
+      
+        </tbody>
+      </table>
+
+    </div>
