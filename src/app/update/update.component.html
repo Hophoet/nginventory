@@ -1,0 +1,19 @@
+<div class="w-75 t-center container">
+    <form   class="container" action="/action_page.php">
+        <div class="container text-center">
+            <h1>Update {{type}}</h1>
+        </div>
+        <div class="form-group">
+            <!-- <label for="email">Email address:</label> -->
+            <input [(ngModel)]="amount" name="amount" type="number" class="form-control" placeholder="Enter amount" id="amount">
+          </div>
+        <div class="form-group">
+          <!-- <label for="email">Email address:</label> -->
+          <input [(ngModel)]="description" name="description" type="text" class="form-control" placeholder="Enter description" id="description">
+        </div>
+         
+        <button (click)="update()"  type="submit" class="btn btn-primary">update</button>
+
+      </form> 
+
+</div>
