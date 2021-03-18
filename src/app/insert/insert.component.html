@@ -1,0 +1,19 @@
+<div class="w-75 t-center container">
+    <form   class="container" action="/action_page.php">
+        <div class="container text-center">
+            <h1>Insert new {{type}}</h1>
+        </div>
+        <div class="form-group">
+            <!-- <label for="email">Email address:</label> -->
+            <input [(ngModel)]="amount" name="amount" type="number" class="form-control" placeholder="Enter amount" id="amount">
+          </div>
+        <div class="form-group">
+          <!-- <label for="email">Email address:</label> -->
+          <input [(ngModel)]="description" name="description" type="text" class="form-control" placeholder="Enter description" id="description">
+        </div>
+         
+        <button (click)="insert()"  type="submit" class="btn btn-primary">insert</button>
+
+      </form> 
+
+</div>
